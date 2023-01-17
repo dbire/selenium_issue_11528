@@ -53,6 +53,6 @@ test_webA: OK
      docker inspect --format='{{json .NetworkSettings.Networks}}' selenium_grid-node-docker-1 | jq
      
  test_webB: KO
-    docker-compose run --rm selenium-tests test_webA
+    docker-compose run --rm selenium-tests test_webB
     
     This test is failing because the selenium container is not able to resolve webB since it is only visible from networkB.
