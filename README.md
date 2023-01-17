@@ -56,3 +56,11 @@ test_webA: OK
     docker-compose run --rm selenium-tests test_webB
     
     This test is failing because the selenium container is not able to resolve webB since it is only visible from networkB.
+    
+ I guess it shows that the @diemol assumption seems not to be what has been implemented: 
+ 
+    "The child containers will be created under the network where the node-docker container is placed."
+    
+    If it was the case the child container (selenium chrome in this case) would have been created and attached to the 3 networks (selenium-network, networkA, networkB) and not only the first found during the node-docker inspection (networkA in this case). Or maybe I am misunderstanding something ?
+    
+    
