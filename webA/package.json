@@ -1,0 +1,13 @@
+{
+    "name": "hello-world",
+    "version": "1.0.0",
+    "description": "Hello World example using Express.js",
+    "main": "serverA.js",
+    "scripts": {
+      "start": "node serverA.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1"
+    }
+  }
+  

@@ -1,0 +1,16 @@
+version: "3"
+services:
+  webB:
+    image: node:latest
+    working_dir: /app
+    command: bash -c "npm install && npm start"
+    ports:
+      - "3301:3000"
+    volumes:
+      - .:/app
+    networks:
+      - networkB
+      
+networks:
+  networkB:
+    external: true

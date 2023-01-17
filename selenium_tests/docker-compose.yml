@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+
+  selenium-tests:
+    build: .
+    image: python_selenium
+    volumes:
+      - ".:/app"
+    networks:
+      - selenium-network
+
+networks:
+   selenium-network:
+    name:  selenium-network
